@@ -1,0 +1,14 @@
+uuid: 26d7d318-8b59-48f7-a396-d2c4d687ef15
+name: D9-Site
+mail: test@example.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE

@@ -1,0 +1,33 @@
+name: d9-app
+recipe: drupal9
+config:
+  php: '7.4'
+  composer_version: '2.0.7'
+  webroot: web
+  drush: false
+  xdebug: true
+
+services:
+  appserver:
+    build:
+      - composer install
+
+  apacheservice:
+    type: apache:2.4
+    ssl: true
+
+  dbservice:
+    type: mysql:5.7
+    creds:
+      user: d9mysql
+      password: d9mysql
+      database: d9database
+
+  phpmyadminservice:
+    type: phpmyadmin
+    hosts:
+      - dbservice
+
+  nodeservice:
+    type: node
+    command: npm start
