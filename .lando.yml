@@ -31,3 +31,9 @@ services:
   nodeservice:
     type: node
     command: npm start
+
+tooling:
+  behat:
+    description: Run behat tests.
+    cmd:
+      - appserver: /app/vendor/bin/behat --config=/app/tests/behat-lando.yml
